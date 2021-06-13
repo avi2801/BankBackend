@@ -49,7 +49,7 @@ router.route('/add').post((req, res) => {
 router.route('/transaction').post((req, res) => {
 	const name1 = req.body.name1
 	const name2 = req.body.name2
-	const balance = req.body.balance
+	const balance = req.body.balance1
 
 	const trans = new transaction({
 		name1, name2, balance
