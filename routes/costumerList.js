@@ -64,9 +64,9 @@ router.route('/transaction:id').put(async (req, res, next) => {
 	console.log(req.params.id)
 
 	const user1 = await costumerList.findOne({ id: req.params.id });
-	var balance1 = user1.balance - req.body.balance
+	var balance1 = user1.balance - req.body.balance1
 	const user2 = await costumerList.findOne({ id: req.body.id2 })
-	var balance2 = user2.balance + parseInt(req.body.balance, 10)
+	var balance2 = user2.balance + parseInt(req.body.balance1, 10)
 	console.log(req.body)
 	user1.balance = balance1
 	user2.balance = balance2
